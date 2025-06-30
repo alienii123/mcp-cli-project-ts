@@ -11,6 +11,9 @@
     "weather": "npm run build && node dist/src/index.js weather",
     "todo": "npm run build && node dist/src/index.js todo",
     "calc": "npm run build && node dist/src/index.js calc",
+    "github": "npm run build && node dist/src/github-cli.js",
+    "github:setup": "./scripts/setup-github.sh",
+    "github:test": "./scripts/test-github-experiments.sh",
     "watch": "tsc --watch",
     "clean": "rm -rf dist",
     "type-check": "tsc --noEmit"

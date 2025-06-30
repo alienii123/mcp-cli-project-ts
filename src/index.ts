@@ -3,6 +3,7 @@ import chalk from 'chalk';
 import { WeatherTool } from '../tools/weather.js';
 import { TodoTool } from '../tools/todo.js';
 import { CalculatorTool } from '../tools/calculator.js';
+import { GitHubTool } from '../tools/github.js';
 import { MCPClient } from './mcp-client.js';
 import type { WeatherOptions, TodoOptions } from '../types/cli-types.js';
 
@@ -11,6 +12,7 @@ const client = new MCPClient();
 const weatherTool = new WeatherTool();
 const todoTool = new TodoTool();
 const calcTool = new CalculatorTool();
+const githubTool = new GitHubTool();
 
 program
   .name('mcp-cli')

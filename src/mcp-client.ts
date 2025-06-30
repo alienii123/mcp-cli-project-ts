@@ -99,6 +99,31 @@ export class MCPClient {
     this.currentServerType = 'git';
   }
 
+  async connectToGitHubServer(): Promise<void> {
+    console.log('🐙 Connecting to GitHub MCP server...');
+    
+    // Check for GitHub token
+    const githubToken = process.env.GITHUB_PERSONAL_ACCESS_TOKEN || process.env.GITHUB_TOKEN;
+    if (!githubToken) {
+      console.warn('⚠️ No GitHub token found. Set GITHUB_PERSONAL_ACCESS_TOKEN environment variable for full access.');
+    }
+    
+    const transportConfig: TransportConfig = {
+      command: 'npx',
+      args: ['-y', '@modelcontextprotocol/server-github'],
+      env: {
+        ...Object.fromEntries(
+          Object.entries(process.env).filter(([_, value]) => value !== undefined)
+        ) as Record<string, string>,
+        // GitHub server requires GITHUB_PERSONAL_ACCESS_TOKEN for API access
+        ...(githubToken && { GITHUB_PERSONAL_ACCESS_TOKEN: githubToken })
+      }
+    };
+
+    await this.connect(transportConfig);
+    this.currentServerType = 'github';
+  }
+
   private async connect(transportConfig: TransportConfig): Promise<void> {
     try {
       // Clean up existing connection

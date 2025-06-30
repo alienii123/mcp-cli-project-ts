@@ -1,0 +1,124 @@
+{
+  "experiments": {
+    "trending_analysis": {
+      "name": "🚀 Trending Technology Analysis",
+      "description": "Analyze trending repositories and popular technologies",
+      "parameters": {
+        "languages": ["typescript", "python", "javascript", "rust", "go"],
+        "time_range": "created:>2024-01-01",
+        "min_stars": 100,
+        "limit": 15
+      }
+    },
+    "developer_insights": {
+      "name": "👨‍💻 Developer Profile Analysis", 
+      "description": "Deep dive into a developer's GitHub activity and contributions",
+      "parameters": {
+        "include_metrics": ["total_repos", "total_stars", "language_distribution", "top_repos"],
+        "repo_limit": 20,
+        "top_repos_count": 5
+      }
+    },
+    "code_pattern_analysis": {
+      "name": "🔍 Code Pattern Research",
+      "description": "Analyze usage patterns of specific code constructs",
+      "patterns": {
+        "typescript": ["interface", "type alias", "async/await", "Promise<"],
+        "react": ["useState", "useEffect", "JSX.Element", "React.FC"],
+        "python": ["async def", "dataclass", "typing."],
+        "rust": ["impl", "match", "Result<", "Option<"],
+        "go": ["goroutine", "channel", "interface{}"]
+      },
+      "parameters": {
+        "limit": 20,
+        "include_snippets": true
+      }
+    },
+    "community_explorer": {
+      "name": "🌐 Technology Community Analysis",
+      "description": "Explore technology communities and their ecosystems",
+      "topics": [
+        "machine-learning",
+        "artificial-intelligence", 
+        "blockchain",
+        "web3",
+        "cybersecurity",
+        "devops",
+        "cloud-native",
+        "microservices",
+        "data-science",
+        "frontend",
+        "backend",
+        "fullstack"
+      ],
+      "parameters": {
+        "repo_limit": 15,
+        "user_limit": 10,
+        "analyze_languages": true,
+        "analyze_trends": true
+      }
+    },
+    "repository_analytics": {
+      "name": "📊 Repository Deep Dive",
+      "description": "Comprehensive analysis of specific repositories",
+      "parameters": {
+        "include_metrics": ["stars", "forks", "issues", "contributors", "languages"],
+        "analyze_commits": false,
+        "analyze_issues": true,
+        "get_readme": true
+      }
+    }
+  },
+  "presets": {
+    "ai_research": {
+      "name": "🤖 AI/ML Research Exploration",
+      "experiments": ["trending_analysis", "community_explorer"],
+      "focus": {
+        "languages": ["python", "jupyter-notebook"],
+        "topics": ["machine-learning", "artificial-intelligence", "deep-learning"],
+        "patterns": ["tensorflow", "pytorch", "scikit-learn"]
+      }
+    },
+    "web_development": {
+      "name": "🌐 Web Development Ecosystem",
+      "experiments": ["trending_analysis", "code_pattern_analysis"],
+      "focus": {
+        "languages": ["typescript", "javascript", "css"],
+        "topics": ["react", "vue", "angular", "nextjs"],
+        "patterns": ["component", "hook", "api route"]
+      }
+    },
+    "systems_programming": {
+      "name": "⚙️ Systems Programming Analysis", 
+      "experiments": ["trending_analysis", "community_explorer"],
+      "focus": {
+        "languages": ["rust", "go", "c++"],
+        "topics": ["systems-programming", "performance", "concurrency"],
+        "patterns": ["unsafe", "async", "threading"]
+      }
+    }
+  },
+  "cool_discoveries": [
+    {
+      "name": "🔥 Viral Code Patterns",
+      "description": "Find code patterns that suddenly became popular",
+      "query": "created:>2024-06-01 stars:>500",
+      "focus": "new trending patterns"
+    },
+    {
+      "name": "🌟 Rising Stars",
+      "description": "Developers with rapidly growing repositories",
+      "approach": "Find repos with exponential star growth"
+    },
+    {
+      "name": "🧪 Experimental Technologies",
+      "description": "Bleeding-edge tech adoption patterns",
+      "topics": ["webassembly", "edge-computing", "quantum-computing"]
+    },
+    {
+      "name": "🌍 Global Developer Insights",
+      "description": "Geographic distribution of technology adoption",
+      "analyze": "user locations and technology preferences"
+    }
+  ]
+} 
