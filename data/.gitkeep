@@ -1,0 +1,3 @@
+# This file ensures the data directory is tracked in git
+# The data directory is used for storing application data like todos.json
+# The contents are ignored via .gitignore but the directory structure is preserved 

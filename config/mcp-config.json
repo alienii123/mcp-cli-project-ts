@@ -1,0 +1,16 @@
+{
+  "servers": {
+    "weather": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-weather"],
+      "env": {
+        "WEATHER_API_KEY": "your_api_key_here"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-filesystem", "/path/to/allowed/directory"]
+    }
+  },
+  "defaultServer": "weather"
+}
